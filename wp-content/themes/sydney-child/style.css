@@ -1,0 +1,190 @@
+/*
+ Theme Name:   Helemaal de bom theme
+ Theme URI:    https://www.helemaaldebom.nl/
+ Description:  Helemaal de bom child theme
+ Author:       Bas Romeijn
+ Author URI:   https://www.helemaaldebom.nl/
+ Template:     sydney
+ Version:      1.0.0
+ Tags:         plaats, hier, jouw, tags, gescheiden, door, kommas
+ Text Domain:  sydney-child
+*/
+/* =Eigen CSS hier beneden plaatsen
+-------------------------------------------------------------- */
+.home-slider {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 170px 0px;
+}
+
+.home-slider-inhoud {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1000px;
+}
+
+.home-slider-inhoud {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: rgba(160, 91, 152, 0.568627451);
+  padding: 50px;
+  text-align: center;
+  border: 30px solid rgba(160, 91, 152, 0);
+}
+
+.blauweTitel {
+  font-family: "Allura";
+  color: #61B9AE;
+  font-size: 50px;
+  font-weight: 11;
+  margin-left: 10px;
+}
+
+.titel_slider_1 {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  margin-bottom: 0px;
+}
+
+.titel_slider_2 {
+  margin: 0px;
+  color: white;
+  font-family: "Allura";
+  font-size: 45px;
+  font-weight: 100;
+}
+
+.informatie1-home-inhoud {
+  display: flex;
+  gap: 5%;
+  margin: 100px 0px;
+  padding: 0px 30px 0px 0px;
+}
+
+.informatie1-home-c1 {
+  width: 40%;
+}
+
+.informatie1-home-c2 {
+  max-width: 950px;
+  width: 100%;
+  padding: 0px 30px;
+}
+
+.afbeeldingInfo-1 {
+  box-shadow: 60px 60px #52A48D;
+  max-width: 650px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.titel-info1-home {
+  font-family: "Allura";
+  font-size: 45px;
+  font-weight: 400;
+  color: #464646;
+  letter-spacing: -2.25px;
+}
+
+.titelMonster {
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-left: 15px;
+  letter-spacing: -1.5px;
+}
+
+.informatie1-home-c2 p {
+  color: #464646;
+  text-align: justify;
+  /* Body tekst */
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.tuin-ontwerpen-inhoud {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px 30px 10px;
+}
+
+.tuin-ontwerpen-kolommen {
+  display: flex;
+}
+
+.tuin-ontwerpen-c1, .tuin-ontwerpen-c2 {
+  flex: 100%;
+}
+
+.titel-en-streep {
+  display: flex;
+  align-items: center;
+}
+
+.streep-tuinontwerpen {
+  flex: 1;
+  margin: 0px 20px;
+}
+
+.streep {
+  height: 3px;
+  background: #a05b98;
+  border: 0px;
+  border-radius: 10px;
+}
+
+.pijlNaarBeneden {
+  text-align: center;
+}
+
+.titel-tuinontwerpen {
+  color: #464646;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -1.5px;
+}
+
+.informatie-tuinontwerpen p {
+  color: #464646;
+  text-align: justify;
+  /* Body tekst */
+  font-family: "Mukta", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.fotos-home {
+  position: relative;
+  float: left;
+}
+
+.fotos-home .hoverImg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+}
+
+.fotos-home:hover .hoverImg {
+  display: block;
+}
+
+.fotos-home-inhoud {
+  max-width: 1600px;
+  width: 100%;
+  display: flex;
+  margin: 0 auto;
+  padding: 0px 30px;
+}/*# sourceMappingURL=style.css.map */
