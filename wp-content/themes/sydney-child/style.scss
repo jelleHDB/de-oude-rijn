@@ -19,6 +19,25 @@ $muktaFont: 'Mukta', sans-serif;
 $monsterFont: 'Montserrat', sans-serif;
 $alluraFont: 'Allura';
 
+body, html, #page {
+    background-color: #F3EADF;
+}
+
+@media (min-width: 992px) {
+    .site-logo {
+        max-height: 100px !important;
+        margin-bottom: -60px;
+        background: #F3EADF;
+        transition: all .3s ease-in-out;
+    }
+
+    .sticky-active .site-logo {
+        margin-bottom: 0px !important;
+        max-height: 80px !important;
+        transition: all .3s ease-in-out;
+    }
+}
+
 .home-slider {
     background-position: center;
     background-repeat: no-repeat;
@@ -67,8 +86,11 @@ $alluraFont: 'Allura';
 
 .informatie1-home-inhoud {
     display: flex;
+    align-items: center;
+    max-width: 1440px;
+    width: 100%;
     gap: 5%;
-    margin: 100px 0px;
+    margin: 50px auto;
     padding: 0px 30px 0px 0px;
 }
 
@@ -80,6 +102,7 @@ $alluraFont: 'Allura';
     max-width: 950px;
     width: 100%;
     padding: 0px 30px;
+    flex: 50%;
 }
 
 .afbeeldingInfo-1 {
@@ -95,6 +118,7 @@ $alluraFont: 'Allura';
     font-weight: 400;
     color: #464646;
     letter-spacing: -2.25px;
+    margin-bottom: 0px;
 }
 
 .titelMonster {
@@ -115,10 +139,11 @@ $alluraFont: 'Allura';
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 15px;
 }
 
 .tuin-ontwerpen-inhoud {
-    max-width: 1600px;
+    max-width: 1440px;
     width: 100%;
     margin: 0 auto;
     padding: 80px 30px 10px;
@@ -126,6 +151,7 @@ $alluraFont: 'Allura';
 
 .tuin-ontwerpen-kolommen {
     display: flex;
+    align-items: flex-end;
 }
 
 .tuin-ontwerpen-c1, .tuin-ontwerpen-c2 {
@@ -192,9 +218,270 @@ $alluraFont: 'Allura';
 }
 
 .fotos-home-inhoud {
-    max-width: 1600px;
+    max-width: 1440px;
     width: 100%;
     display: flex;
     margin: 0 auto;
-    padding: 0px 30px;
+    padding: 0px 25px;
+    gap: 1%;
+}
+
+.imageBox {
+    position: relative;
+    float: left;
+    flex: 33.33%;
+}
+  
+.imageBox .hoverImg {
+    position: absolute;
+    left: 3px;
+    top: 0;
+    display: none;
+}
+  
+.imageBox:hover .hoverImg {
+    display: block;
+    cursor: pointer;
+}
+
+.imageBox img {
+    width: 100%;
+    position: relative;
+    z-index: 100;
+}
+
+.hoverImg {
+    width: 98%;
+}
+
+@media only screen and (max-width: 1440px) and (min-width: 900px)  {
+    .informatie1-home-c1, .informatie1-home-c2 {
+        flex: 100%;
+    }
+}
+
+@media only screen and (max-width: 899px)  {
+    .informatie1-home-inhoud {
+        flex-direction: column-reverse;
+    }
+
+    .informatie1-home-c1 {
+        margin-top: 50px;
+        width: 90%;
+    }
+
+    .afbeeldingInfo-1 {
+        max-width: unset;
+    }
+
+    .tuin-ontwerpen-kolommen {
+        flex-direction: column;
+    }
+
+    .tuin-ontwerpen-c2 {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px)  {
+    .fotos-home-inhoud {
+        flex-direction: column;
+    }
+}
+
+.button-ontwerpen {
+    border-radius: 2px;
+    background: $secondColor;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 10px 20px; 
+    color: white;
+    text-transform: uppercase;
+    font-family: $monsterFont;
+    text-align: justify;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.2px;
+}
+
+.button-ontwerpen:hover {
+    background: $mainColor;
+    color: white;
+}
+
+.button-foto {
+    max-width: 1440px;
+    width: 100%;
+    padding: 30px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 100;
+}
+
+.home-kunst-inhoud {
+    max-width: 1440px; 
+    width: 100%;
+    display: flex;
+    gap: 10%;
+    margin: 0 auto;
+    padding: 270px 30px 60px;
+    position: relative;
+    z-index: 10;
+}
+
+.home-kunst-c2 {
+    flex: 50%;
+}
+
+.paarse-titel {
+    margin: 0px 15px 0px 8px;
+    color: $secondColor;
+    font-family: $alluraFont;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2.75px;
+}
+
+.titels-homeKunst {
+    color: #464646;
+    /* Titel */
+    font-family: $monsterFont;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.75px;
+}
+
+.home-kunst-c1 {
+    border-left: 3px solid $secondColor;
+    margin-left: 10px;
+}
+
+.afbeelding-homeKunst {
+    margin-left: 20px;
+}
+
+.afbeelding-homeKunst {
+    border-radius: 2px;
+    margin-top: 10px;
+    height: 550px;
+}
+
+.home-kunst {
+    position: relative;
+}
+
+.groen-blok {
+    background-color: $mainColor;
+    padding: 200px 15%;
+    position: absolute;
+    bottom: 0;
+}
+
+.titels-kunstOntwerpen p {
+    color: #464646;
+    text-align: justify;
+    /* Body tekst */
+    font-family: $muktaFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.home-kunst {
+    background-color: #61B9AE21;
+}
+
+.foto-home {
+    margin-bottom: -270px;
+    padding-bottom: 50px;
+}
+
+@media only screen and (max-width: 900px)  {
+    .home-kunst-inhoud {
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 900px)  {
+    .home-kunst-inhoud {
+        flex-direction: column-reverse;
+        padding: 250px 30px 60px;
+    }
+
+    .afbeelding-homeKunst {
+        height: unset;
+    }
+}
+
+.klant-ervaring {
+    padding: 50px 0px 0px;
+}
+
+.quote-home {
+    text-align: right;
+    margin-top: -50px;
+    position: relative;
+    z-index: 10;
+}
+
+.quote-tekst {
+    padding: 40px;
+    background-color: $secondColor;
+    display: inline-block;
+    max-width: 340px;
+    width: 100%;
+    text-align: left;
+    color: white;
+    font-family: $monsterFont;
+    font-size: 28px;
+    font-style: italic;
+    font-weight: 500;
+    letter-spacing: -1.4px;
+}
+
+.klant-ervaring-inhoud {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.fa-leaf {
+    margin-left: 10px;
+    color: $secondColor;
+}
+
+.titel-klant-ervaring {
+    color: #464646;
+    text-align: center;
+    font-family: $monsterFont;
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -2.75px;
+    text-decoration: underline;
+    text-decoration-color: $secondColor;
+    text-decoration-thickness: 3px;
+}
+
+.reviews-all {
+    display: flex;
+    gap: 10%;
+    margin-top: 80px;
+}
+
+.reviews-div {
+    flex: 33.33%;
+    padding: 25px 75px;
+    border-radius: 2px;
+    border: 2px solid #52A48D;
+    background: rgba(97, 185, 174, 0.13);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }

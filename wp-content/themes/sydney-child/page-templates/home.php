@@ -63,27 +63,103 @@ get_header(); ?>
 </div>
 <div class="foto-home">
     <div class="fotos-home-inhoud">
-        <div class="fotos-home">
-        <?php if ( have_rows( 'ontwerpen-tuinontwerpen-home' ) ) : ?>
-            <?php while ( have_rows( 'ontwerpen-tuinontwerpen-home' ) ) : the_row(); ?>
-                <?php if ( have_rows( 'afbeelding_en_hover-tuinontwerpen-home' ) ) : ?>
-                    <?php while ( have_rows( 'afbeelding_en_hover-tuinontwerpen-home' ) ) : the_row(); ?>
-                        <div class="imageInn">
-                            <?php if ( get_sub_field( 'afbeelding-tuinontwerpen' ) ) : ?>
-                                <img src="<?php the_sub_field( 'afbeelding-tuinontwerpen' ); ?>" />
-                            <?php endif ?>
-                        </div>
-                        <div class="hoverImg">
-                            <?php if ( get_sub_field( 'afbeelding_hover-tuinontwerpen' ) ) : ?>
-                                <img src="<?php the_sub_field( 'afbeelding_hover-tuinontwerpen' ); ?>" />
-                            <?php endif ?>
+        <?php if ( have_rows( 'afbeeldingen_met_hover-tuinontwerpen' ) ) : ?>
+            <?php while ( have_rows( 'afbeeldingen_met_hover-tuinontwerpen' ) ) : the_row(); ?>
+                <?php if ( have_rows( 'afbeelding_met_hover-tuinontwerpen_1' ) ) : ?>
+			        <?php while ( have_rows( 'afbeelding_met_hover-tuinontwerpen_1' ) ) : the_row(); ?>
+                        <div class="imageBox">
+                            <div class="imageInn">
+                                <?php if ( get_sub_field( 'afbeelding-tuinontwerpen_1' ) ) : ?>
+                                    <img src="<?php the_sub_field( 'afbeelding-tuinontwerpen_1' ); ?>" />
+                                <?php endif ?>
+                            </div>
+                            <div class="hoverImg">
+                                <?php if ( get_sub_field( 'hover_afbeelding-tuinontwerpen_1' ) ) : ?>
+                                    <img src="<?php the_sub_field( 'hover_afbeelding-tuinontwerpen_1' ); ?>" />
+                                <?php endif ?>
+                            </div>
                         </div>
                     <?php endwhile; ?>
-                <?php endif; ?>
+		        <?php endif; ?>
+                <?php if ( have_rows( 'afbeelding_met_hover-tuinontwerpen_2' ) ) : ?>
+			        <?php while ( have_rows( 'afbeelding_met_hover-tuinontwerpen_2' ) ) : the_row(); ?>
+                        <div class="imageBox">
+                            <div class="imageInn">
+                                <?php if ( get_sub_field( 'afbeelding-tuinontwerpen_2' ) ) : ?>
+                                    <img src="<?php the_sub_field( 'afbeelding-tuinontwerpen_2' ); ?>" />
+                                <?php endif ?>
+                            </div>
+                            <div class="hoverImg">
+                                <?php if ( get_sub_field( 'hover_afbeelding-tuinontwerpen_2' ) ) : ?>
+                                    <img src="<?php the_sub_field( 'hover_afbeelding-tuinontwerpen_2' ); ?>" />
+                                <?php endif ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+		        <?php endif; ?>
+                <?php if ( have_rows( 'afbeelding_met_hover-tuinontwerpen_3' ) ) : ?>
+			        <?php while ( have_rows( 'afbeelding_met_hover-tuinontwerpen_3' ) ) : the_row(); ?>
+                        <div class="imageBox">
+                            <div class="imageInn">
+                                <?php if ( get_sub_field( 'afbeelding-tuinontwerpen_3' ) ) : ?>
+                                    <img src="<?php the_sub_field( 'afbeelding-tuinontwerpen_3' ); ?>" />
+                                <?php endif ?>
+                            </div>
+                            <div class="hoverImg">
+                                <?php if ( get_sub_field( 'hover_afbeelding-tuinontwerpen_3' ) ) : ?>
+                                    <img src="<?php the_sub_field( 'hover_afbeelding-tuinontwerpen_3' ); ?>" />
+                                <?php endif ?>
+                            </div>
+                        </div>
+                    <?php endwhile; ?>
+		        <?php endif; ?>
             <?php endwhile; ?>
-        <?php else : ?>
-            <?php // No rows found ?>
         <?php endif; ?>
+    </div>
+    <div class="button-foto">
+        <?php $button_tuinontwerpen_home = get_field( 'button-tuinontwerpen-home' ); ?>
+        <?php if ( $button_tuinontwerpen_home ) : ?>
+            <a class="button-ontwerpen" href="<?php echo esc_url( $button_tuinontwerpen_home['url'] ); ?>" target="<?php echo esc_attr( $button_tuinontwerpen_home['target'] ); ?>"><?php echo esc_html( $button_tuinontwerpen_home['title'] ); ?></a>
+        <?php endif; ?>                             
+    </div>
+</div>
+<div class="home-kunst">
+    <div class="home-kunst-inhoud">
+        <div class="home-kunst-c1">
+            <?php if ( get_field( 'afbeelding-homeKunst' ) ) : ?>
+                <img class="afbeelding-homeKunst" src="<?php the_field( 'afbeelding-homeKunst' ); ?>" />
+            <?php endif ?>
+        </div>
+        <div class="home-kunst-c2">
+            <?php if ( have_rows( 'titels-kunstOntwerpen' ) ) : ?>
+                <?php while ( have_rows( 'titels-kunstOntwerpen' ) ) : the_row(); ?>
+                    <h2 class="titels-homeKunst"><?php the_sub_field( 'titel-kunstOntwerpen_1' ); ?><span class="paarse-titel"><?php the_sub_field( 'titel-kunstOntwerpen_2' ); ?></span><?php the_sub_field( 'titeltitel-kunstOntwerpen_3' ); ?></h2>
+                <?php endwhile; ?>
+            <?php endif; ?>
+            <span class="titels-kunstOntwerpen">
+                <?php the_field( 'informatie-kunstOntwerpen' ); ?>
+            </span>
+        </div>
+    </div>
+    <div class="groen-blok"></div>
+</div>
+<div class="quote-home">
+    <h2 class="quote-tekst"><?php the_field( 'quote-klantervaringen' ); ?></h2>
+</div>
+<div class="klant-ervaring">
+    <div class="klant-ervaring-inhoud">
+        <h2 class="titel-klant-ervaring"><?php the_field( 'titel-klantervaring' ); ?><i class="fa fa-leaf"></i></h2>
+        <div class="reviews-all">
+            <?php if ( have_rows( 'reviews-klantervaring' ) ) : ?>
+                <?php while ( have_rows( 'reviews-klantervaring' ) ) : the_row(); ?>
+                    <div class="reviews-div">
+                        <?php the_sub_field( 'klantervaring-info' ); ?>
+                    </div>
+                <?php endwhile; ?>
+            <?php else : ?>
+                <?php // No rows found ?>
+            <?php endif; ?>
+        </div>
     </div>
 </div>
 
