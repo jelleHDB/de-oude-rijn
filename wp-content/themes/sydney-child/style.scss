@@ -23,6 +23,11 @@ body, html, #page {
     background-color: #F3EADF;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 @media (min-width: 992px) {
     .site-logo {
         max-height: 100px !important;
@@ -449,7 +454,7 @@ body, html, #page {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
-    padding: 30px;
+    padding: 30px 30px 100px;
 }
 
 .fa-leaf {
@@ -466,22 +471,710 @@ body, html, #page {
     font-weight: 700;
     line-height: normal;
     letter-spacing: -2.75px;
-    text-decoration: underline;
-    text-decoration-color: $secondColor;
-    text-decoration-thickness: 3px;
+    margin-bottom: 10px;
 }
 
 .reviews-all {
     display: flex;
-    gap: 10%;
+    gap: 8%;
     margin-top: 80px;
 }
 
 .reviews-div {
     flex: 33.33%;
-    padding: 25px 75px;
+    padding: 50px;
     border-radius: 2px;
     border: 2px solid #52A48D;
     background: rgba(97, 185, 174, 0.13);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+}
+
+.reviews-div p {
+    color: #464646;
+    text-align: justify;
+    font-family: $muktaFont;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0px;
+}
+
+@media only screen and (max-width: 1100px) and (min-width: 700px)  {
+    .reviews-all {
+        flex-wrap: wrap;
+    }
+
+    .reviews-all div:nth-child(3) {
+        margin-top: 75px;
+    }
+
+    .titel-klant-ervaring {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 699px)  {
+    .reviews-all {
+        flex-direction: column;
+    }
+
+    .reviews-all div:nth-child(3) {
+        margin-top: 0px !important;
+    }
+
+    .reviews-all div {
+        margin-bottom: 30px;
+    }
+
+    .titel-klant-ervaring {
+        font-size: 30px;
+    }
+
+    .lijnOnderTitel {
+        max-width: 270px !important;
+    }
+}
+
+.lijnOnderTitel {
+    height: 2px;
+    background: $secondColor;
+    border: 0px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.streep-footer {
+    max-width: 1600px;
+    width: 100%;
+    height: 2px;
+    background: $secondColor;
+    border: 0px;
+}
+
+.footer-inhoud {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-inhoud {
+    max-width: 1600px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+}
+
+.footer-c1 {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 50px;
+    bottom: 30px;
+}
+
+.footer-c2 {
+    display: flex;
+    justify-content: center;
+    gap: 10%;
+}
+
+.footer-c1, .footer-c2 {
+    flex: 50%;
+}
+
+.menu-item-c1 {
+    display: block;
+}
+
+.titel-footer {
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: $secondColor;
+    font-family: $alluraFont;
+}
+
+.menu-item-c1 {
+    color: #464646;
+    margin-bottom: 25px;
+    font-family: $monsterFont;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.straatnaam-tekst, .postcode-tekst, .link-footer-c2 {
+    color: #464646;
+    font-family: $monsterFont;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1px;
+    margin-bottom: 25px;
+}
+
+.link-footer-c2 {
+    display: block;
+}
+
+.footer-c2 a:hover {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+}
+
+.credit-footer-inhoud {
+    max-width: 1660px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 30px 30px 30px; 
+}
+
+.sydney-credits {
+    font-family: $muktaFont;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.sydney-credits a {
+    color: #464646;
+}
+
+.sydney-credits a:hover {
+    text-decoration: underline;
+}
+
+#footer {
+    padding: 0px 30px;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 600px)  {
+    .footer-inhoud {
+        flex-direction: column;
+    }
+
+    .footer-c1 {
+        position: unset;
+        margin-bottom: 70px;
+    }
+
+    .footer-c2 {
+        gap: 40%;
+    }
+
+    .footer-inhoud {
+        background-position: bottom;
+        background-size: contain;
+    }
+}
+
+@media only screen and (max-width: 599px)  {
+    .footer-inhoud {
+        flex-direction: column;
+    }
+
+    .footer-c1 {
+        position: unset;
+        margin-bottom: 30px;
+    }
+
+    .footer-c2 {
+        flex-direction: column;
+    }
+
+    .footer-inhoud {
+        background-position: bottom;
+        background-size: contain;
+    }
+
+    .footer-c2-c1 {
+        margin: 30px 0px;
+    }
+}
+
+.tuinOntwerpen-slider {
+    padding: 120px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.tuinOntwerpen {
+    padding: 80px 0px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-size: auto;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto -100px;
+}
+
+.tuinOntwerpen-info {
+    padding: 30px;
+}
+
+.titel-tuinOntwerpen {
+    color: #464646;
+    font-family: $monsterFont;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.75px;
+}
+
+.informatie-tuinOntwerpen p {
+    color: #464646;
+    text-align: justify;
+    font-family: $muktaFont;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 25px;
+}
+
+.onzeOntwerpen-inhoud {
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.onzeOntwerpen{
+    position: relative;
+}
+
+.titel-onzeOntwerpen {
+    color: $secondColor;
+    font-family: $monsterFont;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -1.5px;
+}
+
+.schuine-titel-onzeOntwerpen {
+    margin-left: 10px;
+    color: $secondColor;
+    font-family: $alluraFont;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -2.5px;
+}
+
+.onzeOntwerpen-fotos {
+    display: flex;
+}
+
+.titel-foto-onzeOntwerpen {
+    color: #464646;
+    text-align: center;
+    font-family: $alluraFont;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.75px;
+}
+
+.onzeOntwerpen-fotos .hoverImg {
+    width: 100% !important;
+    left: 0px !important;
+}
+
+.dikke-lijn-fotos {
+    height: 45%;
+    border: 0px;
+    background-color: $mainColor;
+    position: absolute;
+    width: 100%;
+    top: 24%;
+}
+
+@media only screen and (max-width: 1130px) and (min-width: 803px)  {
+    .dikke-lijn-fotos {
+        height: 35%;
+        top: 32%;
+    }
+
+    .titel-foto-onzeOntwerpen {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 802px)  {
+    .onzeOntwerpen-fotos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imageBox {
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .titel-onzeOntwerpen {
+        text-align: center;
+        position: relative;
+        font-size: 40px;
+    }
+
+    .titel-foto-onzeOntwerpen {
+        color: white;
+        font-size: 50px;
+    }
+
+    .schuine-titel-onzeOntwerpen {
+        font-size: 75px;
+    }
+
+    .dikke-lijn-fotos {
+        height: 100%;
+        top: unset;
+    }
+}
+
+@media only screen and (max-width: 500px)  {
+    .titel-foto-onzeOntwerpen {
+        color: white;
+        font-size: 35px;
+        margin-bottom: 50px;
+    }
+
+    .titel-onzeOntwerpen {
+        text-align: center;
+        position: relative;
+        font-size: 30px;
+    }
+
+    .schuine-titel-onzeOntwerpen {
+        font-size: 50px;
+    }
+}
+
+.onzeWerkwijze {
+    background-color: $mainColor;
+    padding: 0px 30px 0px 0px;
+    margin: 100px 0;
+}
+
+.onzeWerkwijze-inhoud {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 5%;
+}
+
+.onzeWerkwijze-c1, .onzeWerkwijze-c2, .onzeWerkwijze-c2-c1  {
+    flex: 100%;
+}
+
+.onzeWerkwijze-c2 {
+    display: flex;
+    align-items: center;
+    padding: 20px 0px;
+}
+
+.onzeWerkwijze-c2-c1 {
+    text-align: center;
+}
+
+.onzeWerkwijze-c2-c1 img {
+    margin-top: 60px;
+}
+
+.afbeelding-onzeWerkwijze {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.titel-onzeWerkwijze {
+    color: #F3EADF;
+    font-family: $monsterFont;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.5px;
+}
+
+.schuine-titel-onzeWerkwijze {
+    margin-left: 10px;
+    color: #F3EADF;
+    font-family: $monsterFont;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -1.5px;
+}
+
+.informatie-onzeWerkwijze p {
+    color: #F3EADF;
+    text-align: justify;
+    font-family: $muktaFont;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media only screen and (max-width: 900px)  {
+    .onzeWerkwijze-inhoud {
+        flex-direction: column;
+    }
+    .onzeWerkwijze {
+        padding: 0px !important;
+    }
+
+    .onzeWerkwijze-c2 {
+        padding: 20px !important;
+    }
+
+    .onzeWerkwijze-c2-c1 img {
+        width: 20px;
+    }
+}
+
+@media only screen and (max-width: 550px)  {
+    .onzeWerkwijze-c2-c1 img {
+        width: 25px;
+    }
+}
+
+.contact-tuinOntwerpen {
+    margin: 150px 0px;
+}
+
+.contact-tuinOntwerpen-inhoud {
+    max-width: 1600px;
+    width: 100%;
+    margin: 100px auto;
+    padding: 30px;
+    display: flex;
+    gap: 10%;
+}
+
+.contact-tuinOntwerpen-c1, .contact-tuinOntwerpen-c2 {
+    flex: 100%;
+}
+
+.contact-tuinOntwerpen-c1 {
+    border-left: 2px solid $mainColor;
+    padding-left: 60px;
+}
+
+.contact-tuinOntwerpen-c2 {
+    position: relative;
+}
+
+.contactform-tuinontwerpen-div {
+    display: flex;
+    gap: 5%;
+}
+
+.paarsVlak {
+    background-color: $secondColor;
+    position: absolute;
+    width: 2000px;
+    z-index: 1;
+    top: 5%;
+    padding: 300px;
+}
+
+.afbeelding-contact-tuin {
+    position: relative;
+    z-index: 2;
+    margin-left: 20px;
+}
+
+.titel-contactTuin {
+    color: #464646;
+    font-family: $monsterFont;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.5px;
+}
+
+.titel-dik-contactTuin {
+    color: #464646;
+    font-family: $monsterFont;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: -1.5px;
+    margin: 0px 10px;
+}
+
+.contactform-tuinontwerpen-vier-div p {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contactform-tuinontwerpen-vier-div p label, .contactform-tuinontwerpen-div p label, .inputVelden-contactForm label, .contactformulier-contact label {
+    flex: 50%;
+    width: 100%;
+    color: $secondColor;
+    font-family: $muktaFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.inputVelden-contactForm input, .contact-div input, textarea {
+    background-color: transparent;
+    border: 0px !important;
+    border-bottom: 1px solid black !important;
+    padding-left: 0px !important;
+}
+
+textarea {
+    width: 100% !important;
+}
+
+.inputVelden-contactForm input::placeholder , .contactformulier-contact input::placeholder {
+    color: #46464680 !important;
+}
+
+.wpcf7-text:focus, .wpcf7-textarea:focus {
+    outline:none;
+}
+
+.wpcf7-submit {
+    border-radius: 2px;
+    background: $secondColor !important;
+    color: white !important;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding: 5px 30px !important;
+    font-size: 12px !important;
+    border: 0px !important;
+    text-align: justify;
+    font-family: $monsterFont;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: -0.5px;
+}
+
+.wpcf7-submit:hover {
+    background: $mainColor !important;
+}
+
+@media only screen and (max-width: 1600px) and (min-width: 1250px)  {
+    .contact-tuinOntwerpen-inhoud {
+        align-items: center;
+    }
+
+    .paarsVlak {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1249px) and (min-width: 850px)  {
+    .contact-tuinOntwerpen-inhoud {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .paarsVlak {
+        display: none;
+    }
+
+    .contact-tuinOntwerpen-c2 {
+        margin-top: 50px;
+    }
+
+    .afbeelding-contact-tuin {
+        margin-left: 0px;
+    }
+}
+
+@media only screen and (max-width: 849px) {
+    .contact-tuinOntwerpen-inhoud {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .paarsVlak {
+        display: none;
+    }
+
+    .contact-tuinOntwerpen-c2 {
+        margin-top: 50px;
+    }
+
+    .contactform-tuinontwerpen-div {
+        flex-direction: column;
+    }
+
+    .inputVelden-contactForm input, .inputVelden-contactForm label {
+        width: 100%;
+    }
+
+    .contact-tuinOntwerpen-c1 {
+        padding-left: 30px;
+    }
+
+    .contact-tuinOntwerpen {
+        margin: 0px;
+    }
+
+    .afbeelding-contact-tuin {
+        margin-left: 0px;
+    }
+
+    .titel-contactTuin {
+        font-size: 18px !important;
+    }
+
+    .titel-dik-contactTuin {
+        font-size: 18px !important;
+        margin: 0px 5px !important;
+    }
+
+    .contact-tuinOntwerpen-inhoud {
+        margin: 0px;
+    }
+
+    .onzeWerkwijze {
+        margin: 100px 0px 15px;
+    }
+}
+
+.contact-inhoud {
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 60px 30px;
+    display: flex;
+    gap: 10%;
+}
+
+.contact-c1, .contact-c2 {
+    flex: 100%;
+}
+
+.contact-div {
+    display: flex;
+    gap: 5%;
 }

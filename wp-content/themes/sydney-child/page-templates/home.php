@@ -149,6 +149,7 @@ get_header(); ?>
 <div class="klant-ervaring">
     <div class="klant-ervaring-inhoud">
         <h2 class="titel-klant-ervaring"><?php the_field( 'titel-klantervaring' ); ?><i class="fa fa-leaf"></i></h2>
+        <hr class="lijnOnderTitel">
         <div class="reviews-all">
             <?php if ( have_rows( 'reviews-klantervaring' ) ) : ?>
                 <?php while ( have_rows( 'reviews-klantervaring' ) ) : the_row(); ?>
